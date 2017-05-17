@@ -1,0 +1,40 @@
+.hiddenContent{
+	display:none;
+}
+
+.pullLeft{
+	float:left;
+}
+
+label{
+	margin-right:5px;
+}
+
+input{
+	margin-right:10px;
+}
+
+select{
+	margin-right:10px;
+}
+
+.pullRight{
+	float:right;
+}
+
+.techDiv{
+	margin-right:4px;
+	font-style:italic;
+}
+
+.hiddenTech{
+	display:none;
+}
+
+.fullTask{
+	cursor:pointer;
+}
+
+.simpleTask{
+	cursor:pointer;
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Steve Tokarz Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!--3rd party js libraries.  Jquery, underscore, and bootstrap-->
+	<script src="./js/underscore-min.js"></script>
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	
+	<!-- main js file for this site-->
+	<script src="./js/resume.js"></script>
+    
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+
+	<!-- this site is dymaniclly themed by having a base style, then other styles are enabled and disabled when you select them in a dropdown by 
+		 enabling or disabling the stylesheet link by id via javascript -->
+    <link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/styles/default_resume.css" id="default_resume">
+	<link rel="stylesheet" href="./css/styles/blue.css" id="blue">
+	
+	<!-- google fonts, so simple to use-->
+	<link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,700,700i|Muli:400,400i,600i,700,900" rel="stylesheet">
+	
+	</head>
+
+	<body>
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded ">
+		<button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon">&nbsp;</span>
+		</button>
+		<a class="navbar-brand" href="#">&nbsp;</a>
+		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<form id="searchForm" class="form-inline my-2 my-lg-0">
+						<label for="searchInput">Search</label>
+						<input type="text" class="form-control form-control-sm" id="searchInput"></input>
+					</form>
+				</li>
+				<li class="nav-item">
+					<form class="form-inline my-2 my-lg-0">
+					<label for="themeSelect">Theme</label>
+					<select id="themeSelect" class="form-control form-control-sm"></select>
+					</form>
+				</li>
+				<li class="nav-item">
+					<button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#introModal">
+						?
+					</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="introContainer">
+			<h4>
+				Steve A Tokarz
+			</h4>
+			<h5>
+				<a href="tel:630-885-9053">630-885-9053</a>
+			</h5>
+			<h5>
+				<a href="mailto:steventokarz11@gmail.com" target="_top">steventokarz11@gmail.com</a>
+			</h5>
+			<h5>5934 N Paulina 3, Chicago, IL 60660</h5>
+		</div>
+		<div class="mainContainer">
+			<div class="technologyContainer">
+				<div class="row technologySection">
+					<div class="col-md-12">
+						<h6>
+							Technology:
+						</h6>
+					</div>			
+				</div>
+				<div class="row languagesSection">
+					<div class="col-md-2">
+						Languages:
+					</div>
+					<div class="col-md-10">
+						 Javascript, Python, CSS, SCSS, Coldfusion, C#, C++, C, Java, SQL, XML, JSON
+					</div>
+				</div>
+				<div class="row librariesSection">
+					<div class="col-md-2">
+						Libraries:
+					</div>
+					<div class="col-md-10">
+						AngularJS, Bootstrap CSS, Pure CSS,  jQuery, Underscore.js, CryptoJS, AJAX,  Prototype.js, Pylons, Fusebox, SOAP, JBoss
+					</div>
+				</div>		
+				<div class="row softwareSection">
+					<div class="col-md-2">
+						Software:
+					</div>
+					<div class="col-md-10">
+						Linux, Windows, IIS, Apache, Mercurial, Git, SVN, CVS, MS SQL, MySQL, Oracle, MongoDB, Selenium, Balsamiq, Visio, Eclipse, Sublime Text, Notepad++
+					</div>
+				</div>
+			</div>
+			<div class="row employmentSection">
+				<div class="col-md-12">
+					<h6>
+						Employment:
+					</h6>
+				</div>
+				<!-- the main div for dynamic content-->
+				<div class="employmentContainer">
+				
+				</div>
+			</div>
+			<div class="row educationSection">
+				<div class="col-md-12">
+					<h6>
+					Education:
+					</h6>
+				</div>
+				<div class="col-md-12">
+					The University of Illinois at Chicago (UIC), Chicago, IL, May 2004
+				</div>
+				<div class="col-md-12">
+					Bachelor of Science in Computer Engineering
+				</div>
+			</div>	
+		</div>
+	</div>
+	
+	<!-- hidden content container, this contains all the blank sections that are cloned and inserted into the employmentContainer to draw my employment history-->
+	<div class="hiddenContent">
+		<div class="blankEmployment employmentContent">
+			<div class="col-md-12">
+				<div class="employerName">
+				</div>
+				<div class="employerLocation">
+				</div>
+				<div class="employerShortDates hidden-md-up">
+				</div>
+				<div class="employerLongDates hidden-sm-down">
+				</div>
+				<div>
+					<ul class="taskContainer">
+						
+						
+					</ul>
+				</div>	
+			</div>
+		</div>
+	
+		<div class="blankTask taskContent">
+			<li>
+				<div class="fullTask hidden-sm-down">
+
+				</div>
+				<div class="simpleTask hidden-md-up">
+
+				</div>
+				<div>
+					<div  class="techContainerDiv hiddenTech">
+
+					</div>
+				</div>
+			</li>
+			<div class="clearfix"></div>
+		</div>
+		
+		<div class="blankTech techDiv pullLeft">
+		
+		</div>
+		
+		<div class="blankStyleLink">
+			<option value=""></option>
+		</div>
+
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="introModal" tabindex="-1" role="dialog" aria-labelledby="introModal" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="introModalTitle">Welcome to My Resume</h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<div class="welcomeBody">
+				<div class="welcomeText">
+					<p>
+						Hi, I'm Steve Tokarz and this is my interactive resume.
+					</p>
+				</div>
+				<div class="welcomeBody">
+					<p>
+						This is an interactive resume I created to polish up my jQuery skills and get familiar with the Bootstrap 4 alpha.  This site loads all of my employment information from a json file via Ajax and
+						and then does some cloning and Dom writing to display all the jobs, taks, and technology used at each task.  Click on the bulleted task below any Employer to view what technologies I used to perform tht taksk.
+						You can also enter any technology name in the search box in the upper right and I'll redraw the employment section with any tasks that use the technology 
+						you're searching for already expanded and the full name of the technology highlighted.  The search requires 3 characters minimum and is case insensitive.
+					</p>
+					<p>
+						If you don't want to use this interactive version of my resume, you can download a pdf version <a href="docs/tokarz_resume.pdf">here</a>.
+						Also, if you want to view the source of this project on github at <a href="https://github.com/stokarz1/resume_jquery">https://github.com/stokarz1/resume_jquery</a>
+						Thanks for visiting and if you want to see this modal again simply click on the "?" button in the header.
+					</p>
+				</div>
+
+			</div>
+
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </body>
+</html>

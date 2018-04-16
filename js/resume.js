@@ -8,6 +8,8 @@ var resumeObject
 var styleArray = [{'code':'default_resume', 'name':'Default Resume'}, {'code':'blue', 'name':'Blue Theme'}];
 
 $(document).ready(function() {
+	
+
 	//load the default style
 	changeStyle('default_resume');
 
@@ -21,7 +23,7 @@ $(document).ready(function() {
 
 	//append the styles to the dropdown
 	_.each(styleArray, function(style){
-		console.log(style);
+
 		$('#themeSelect').append('<option value="'+ style.code +'">' + style.name + '</option>');
 		
 	});
@@ -32,7 +34,7 @@ $(document).ready(function() {
 	});
 	
 	//show the intro modal
-	$('#introModal').modal('show')
+	//$('#introModal').modal('show')
 	
 	//search for a technology after the user has entered 3 keys in the search field
 	$('#searchInput').keyup(function(){
@@ -81,7 +83,6 @@ var drawResume = function(resumeJson, searchString){
 				var techDiv = $('.blankTech').clone();
 				$(techDiv).removeClass('blankTech');
 				$(techDiv).html(tech.name);
-				console.log(tech.name.toUpperCase().includes(searchString.toUpperCase()));
 				if(tech.name.toUpperCase().includes(searchString.toUpperCase())){
 					$(techDiv).addClass('highlightedTech');
 					$(taskDiv).find(".techContainerDiv").removeClass("hiddenTech");
@@ -98,8 +99,7 @@ var drawResume = function(resumeJson, searchString){
 // used to change the stylesheet of the site by disabling all other styles by code and enabling the selected one
 var changeStyle = function(chosenStyle){
 	_.each(styleArray, function(style){
-		console.log(style.code);
-		console.log(chosenStyle);
+
 		if(chosenStyle == style.code){
 			document.getElementById(style.code).disabled  = false;
 		} else{

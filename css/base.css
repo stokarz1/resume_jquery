@@ -38,3 +38,51 @@ select{
 .simpleTask{
 	cursor:pointer;
 }
+
+.headerDiv{
+  left: 0px;
+  top: 0px;
+  width:100%;
+}
+
+.headerSpacer{
+  height:30px;
+}
+
+.headerBand{
+  background-color:#23e2d7;
+  height:25px;
+}
+
+.headerText{
+  position:absolute;
+  top:-10px;
+  left: 10px;
+	font-family: 'Muli', sans-serif;
+  margin: 3px 0px;
+	padding:10px 20px;
+  font-weight:900;
+  
+}
+.headerText a{
+  color:#000000;
+}
+
+.introContainer{
+  padding-top:20px;
+  
+}
+.selectionImage img{
+ border:solid 1px; 
+ 
+}
+
+.iframeDiv{
+  margin:auto;  
+}
+
+iframe{
+    overflow:hidden;
+}
+
+
